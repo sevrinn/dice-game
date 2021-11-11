@@ -10,7 +10,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div class="wrapper">
+    <h1 id="message">Player 1 Turn</h1>
+    <div class="players">
+      <div id="player1">
+        <h1>Score:
+          <span id="player1Scorebard">0</span>
+        </h1>
+        <div id="player1Dice" class="dice active">-</div>
+      </div>
+      <div id="player1">
+        <h1>Score:
+          <span id="player1Scorebard">0</span>
+        </h1>
+        <div id="player1Dice" class="dice active">-</div>
+      </div>
+    </div>
+    <buton id="rollBtn">Roll Dice 🎲</buton>
+    <button id="resetBtn">Reset Game 🔄</button>
+  </div>
   <script src="diceGame.js"></script>
 </body>
 </html>
