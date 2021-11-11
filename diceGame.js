@@ -19,11 +19,9 @@ rollDice.addEventListener("click", () => {
   //determine which player is playing
   if (player1Turn) {
     console.log(`Player 1 rolled ${randomNumber}`)
-    player1Turn = false
   } else {
     console.log(`Player 2 rolled ${randomNumber}`)
-    player2Turn = true
   }
-
+  player1Turn = !player1Turn
 
 })
