@@ -34,15 +34,17 @@ rollDice.addEventListener("click", () => {
     turnMessage.textContent = "Player 1 Turn"
   }
 
-  if (player1Score >= 20 || player2Score >= 20) {
-    if (player1Score > player2Score) {
+  if (player1Score >= 20) {
       turnMessage.textContent = "Player 1 has won!"
-    } else {
+      rollDice.style.display = "none"
+      resetGame.style.display = "block"
+    } else if (player2Score >= 20) {
       turnMessage.textContent = "Player 2 has won!"
+      rollDice.style.display = "none"
+      resetGame.style.display = "block"
     }
-    rollDice.style.display = "none"
-    resetGame.style.display = "block"
-  }
+
+  
   player1Turn = !player1Turn
 
 })
