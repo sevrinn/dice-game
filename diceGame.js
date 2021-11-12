@@ -1,3 +1,4 @@
+
 //game state variables
 let player1Score = 0
 let player2Score = 0
@@ -31,6 +32,16 @@ rollDice.addEventListener("click", () => {
     player2Dice.classList.remove("active")
     player1Dice.classList.add("active")
     turnMessage.textContent = "Player 1 Turn"
+  }
+
+  if (player1Score >= 20 || player2Score >= 20) {
+    if (player1Score > player2Score) {
+      turnMessage.textContent = "Player 1 has won!"
+    } else {
+      turnMessage.textContent = "Player 2 has won!"
+    }
+    rollDice.style.display = "none"
+    resetGame.style.display = "block"
   }
   player1Turn = !player1Turn
 
