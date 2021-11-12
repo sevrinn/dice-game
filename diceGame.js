@@ -13,6 +13,12 @@ const player2Dice = document.querySelector("#player2Dice")
 const rollDice = document.querySelector("#rollbtn")
 const resetGame = document.querySelector("#resetBtn")
 
+// this function runs when either player has won
+const endGame = () => {
+  rollDice.style.display = "none"
+  resetGame.style.display = "block"
+}
+
 //hook up a click event to rollDice
 rollDice.addEventListener("click", () => {
   let randomNumber = Math.floor(Math.random() * 6) + 1 
@@ -36,12 +42,10 @@ rollDice.addEventListener("click", () => {
 
   if (player1Score >= 20) {
       turnMessage.textContent = "Player 1 has won!"
-      rollDice.style.display = "none"
-      resetGame.style.display = "block"
+      endGame()
     } else if (player2Score >= 20) {
       turnMessage.textContent = "Player 2 has won!"
-      rollDice.style.display = "none"
-      resetGame.style.display = "block"
+      endGame()
     }
 
   
