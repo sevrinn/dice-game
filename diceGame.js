@@ -52,3 +52,21 @@ rollDice.addEventListener("click", () => {
   player1Turn = !player1Turn
 
 })
+
+//attach event listener to reset button
+resetGame.addEventListener("click", () => {
+  reset()
+})
+
+const reset = () => {
+  player1Turn = true
+  player1Score = 0
+  player2Score = 0
+  player1Scoreboard.textContent = player1Score
+  player2Scoreboard.textContent = player2Score
+  turnMessage.textContent = "Player 1 Turn"
+  player1Dice.textContent = "-"
+  player2Dice.textContent = "-"
+  resetGame.style.display = "none"
+  rollDice.style.display = "block"
+}
