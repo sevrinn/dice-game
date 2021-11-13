@@ -41,10 +41,10 @@ rollDice.addEventListener("click", () => {
   }
 
   if (player1Score >= 20) {
-      turnMessage.textContent = "Player 1 has won!"
+      turnMessage.textContent = "✨✨Player 1 has won!✨✨"
       endGame()
     } else if (player2Score >= 20) {
-      turnMessage.textContent = "Player 2 has won!"
+      turnMessage.textContent = "✨✨Player 2 has won!✨✨"
       endGame()
     }
 
